@@ -13,7 +13,8 @@
 
 //first element child of the dropdown
 
-const firstElementofDropdown = document.getElementById('dropdown').firstElementChild.innerHTML;
-document.getElementById('firstEl').innerHTML = firstElementofDropdown;
+// const firstElementofDropdown = document.getElementById('dropdown').firstElementChild.innerHTML;
+// document.getElementById('firstEl').innerHTML = firstElementofDropdown;
 
 //--------------------------------------------
+
