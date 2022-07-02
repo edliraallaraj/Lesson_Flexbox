@@ -1,19 +1,8 @@
-//firstElementChild
+const studentsList = document.querySelector('#myList').firstElementChild.innerHTML;
+document.getElementById('1st').innerHTML = studentsList;
 
-// const firstElementofList = document.getElementById('myList').firstElementChild.innerHTML;
-// document.getElementById('firstEl').innerHTML = firstElementofList;
-//-------------------------------------------
+const firstElementTagName = document.getElementById('myDiv').firstElementChild.tagName;
+document.getElementById('tagName').innerHTML = firstElementTagName;
 
-//first element child with tag name
-
-// let tagNameEl = document.getElementById('myDiv').firstElementChild.tagName;
-// document.getElementById('tagName').innerHTML = tagNameEl;
-
-//--------------------------------------------
-
-//first element child of the dropdown
-
-const firstElementofDropdown = document.getElementById('dropdown').firstElementChild.innerHTML;
-document.getElementById('firstEl').innerHTML = firstElementofDropdown;
-
-//--------------------------------------------
+const firstOption = document.getElementById('dList').firstElementChild.innerHTML;
+document.getElementById('fEl').innerHTML = firstOption
