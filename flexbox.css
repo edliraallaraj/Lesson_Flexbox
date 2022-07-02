@@ -1,4 +1,4 @@
-#flex-container {
+/* #flex-container {
     display: flex;
     flex-wrap: wrap;
     background-color: aquamarine;
@@ -13,4 +13,61 @@
 
 #three {
     flex-basis: 300px;
+} */
+
+/*----------------------------Sidebar */
+
+.outer-div {
+    height: 100vh;
+    background-color: bisque;
+}
+
+.inner-div {
+    background-color: white;
+    margin-left: 38%;
+    margin-right: 38%;
+    height: 70%;
+}
+
+.inner-div>ul {
+    float: left;
+    padding: 20px;
+    width: 90%;
+}
+
+.inner-div>ul>li {
+    color: rgb(255, 174, 75);
+    list-style: none;
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.inner-div>ul>li:hover {
+    background-color: rgb(228, 228, 228);
+    color: purple;
+    transition: all 250ms ease-in
+}
+
+#sidebar {
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: gray;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#sidebar:hover {
+    background-color: white;
+}
+
+img {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    border-radius: 50%;
+    text-align: center;
 }
