@@ -48,17 +48,26 @@
 // }
 
 
-const input = document.getElementById('input')
+const username = document.getElementById('username')
+const psw = document.getElementById('password')
 const p = document.getElementById("p")
 
 function submit() {
-    if (input.value.length == 0) {
-        p.innerHTML = 'Type smth';
-    } else if (input.value < 1 || input.value > 10 && isNaN(!input.value)) {
-        p.innerHTML = 'YAYYYYY';
-    } else if (input.value.length > 0 && isNaN(input.value)) {
-        p.innerHTML = 'Not a valid input';
+    if (username.value.length == 0 || psw.value.length == 0) {
+        p.innerHTML = 'Please enter your credentials!';
+    } else if (username.value.length !== 0 && psw.value.length < 8) {
+        p.innerHTML = 'Password length must be greater than 8!';
+    } else if (
+        username.value.length > 0 &&
+        psw.value.length > 8 &&
+        psw.value.charAt(0) !== NaN &&
+        psw.value.charAt(0) === psw.value.charAt(0).toUpperCase() &&
+        /\d/.test(psw.value) && //contains at least 1 number
+        /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(psw.value)   //contains at least special character
+    ) {
+        p.innerHTML = 'Your are logged in!';
     } else {
-        p.innerHTML = 'Now it is ok!';
+        p.innerHTML = 'Please check your credentials';
     }
+
 }
