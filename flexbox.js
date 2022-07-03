@@ -49,20 +49,16 @@
 
 
 const input = document.getElementById('input')
+const p = document.getElementById("p")
+
 function submit() {
-
     if (input.value.length == 0) {
-        document.getElementById("p").innerHTML = 'Type smth';
+        p.innerHTML = 'Type smth';
+    } else if (input.value < 1 || input.value > 10 && isNaN(!input.value)) {
+        p.innerHTML = 'YAYYYYY';
+    } else if (input.value.length > 0 && isNaN(input.value)) {
+        p.innerHTML = 'Not a valid input';
+    } else {
+        p.innerHTML = 'Now it is ok!';
     }
-    else if (input.value < 1 || input.value > 10 && isNaN(!input.value)) {
-        document.getElementById("p").innerHTML = 'YAYYYYY';
-    }
-
-    else if (input.value.length > 0 && isNaN(input.value)) {
-        document.getElementById("p").innerHTML = 'Not a valid input';
-    }
-    else {
-        document.getElementById("p").innerHTML = 'Now it is ok!';
-    }
-
 }
